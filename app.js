@@ -206,7 +206,7 @@ function drawWorkingHours(inputSchedule, required, $row, index) {
     let hoursEnd = getHours(currentEmploye[4]);
 
     // Clearing previous filling
-    workingHoursArray = [...$row.querySelectorAll('.employee-time')];
+    let workingHoursArray = [...$row.querySelectorAll('.employee-time')];
     workingHoursArray.forEach(item => {
         item.innerText = '';
         let $workingHours = item.firstElementChild;
