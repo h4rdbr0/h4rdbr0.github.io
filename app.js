@@ -169,8 +169,8 @@ function drawSchedule(inputSchedule) {
     inputSchedule.virtual.forEach((item, index) => {
 
         // Making a new row based on header row
-        var $newEmployeeRow = document.querySelector('.header-row').cloneNode(true);
-        $newEmployeeRow.className = `employee-row employe_${index}`;
+        let $newEmployeeRow = document.querySelector('.header-row').cloneNode(true);
+        $newEmployeeRow.className = `employee-row employee-${index}`;
         $newEmployeeRow.setAttribute('is-virtual', true);
 
         // Adding Name and Place/Role
@@ -201,9 +201,9 @@ function drawSchedule(inputSchedule) {
 function drawWorkingHours(inputSchedule, required, $row, index) {
 
     // Getting start and end of working time for employee
-    let currentEmploye = inputSchedule[required][index];
-    let hoursStart = getHours(currentEmploye[3]);
-    let hoursEnd = getHours(currentEmploye[4]);
+    let currentEmployee = inputSchedule[required][index];
+    let hoursStart = getHours(currentEmployee[3]);
+    let hoursEnd = getHours(currentEmployee[4]);
 
     // Clearing previous filling
     let workingHoursArray = [...$row.querySelectorAll('.employee-time')];
@@ -219,8 +219,8 @@ function drawWorkingHours(inputSchedule, required, $row, index) {
     if (hoursStart !== -1 && hoursEnd !== -1) {
 
         // Getting working minutes
-        let minutesStart = getMinutes(currentEmploye[3]);
-        let minutesEnd = getMinutes(currentEmploye[4]);
+        let minutesStart = getMinutes(currentEmployee[3]);
+        let minutesEnd = getMinutes(currentEmployee[4]);
         
         // The end time, like 19:45 - having addintional minutes
         if (minutesEnd > 0) {
