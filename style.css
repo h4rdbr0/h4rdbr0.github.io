@@ -19,10 +19,12 @@
 .dates-list {
   display: none;
   position: absolute;
+  max-height: 240px;
   width: 100%;
   background-color: #e0e0e0;
   box-shadow: 0px 16px 32px 0px rgba(0,0,0,0.5);
   z-index: 1;
+  overflow-y: auto;
 }
 
 .dates-list > div {
