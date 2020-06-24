@@ -310,6 +310,7 @@ function drawLegend() {
  * A function for making a formatted date
  * 
  * @param {number} msec - Date in msec
+ * @return {string} Date in format DD-MM-YYYY
  */
 function getFormattedDate(msec) {
     let date = new Date(msec);
@@ -320,6 +321,7 @@ function getFormattedDate(msec) {
  * A function for making number in format - 01, 02, etc.
  * 
  * @param {number} number - Input number
+ * @return {string} Number in format 01, 09, 12, 20
  */
 function addZeroes(number) {
     return (number < 10) ? `0${number}` : `${number}`;
@@ -329,6 +331,7 @@ function addZeroes(number) {
  * A function for sorting dates in ascending order
  * 
  * @param {object} dateSet - Set of Dates in format DD-MM-YYYY
+ * @return {string[]} Sorted array with formatted dates
  */
 function sortingDates(dateSet) {
 
@@ -349,7 +352,8 @@ function sortingDates(dateSet) {
 /**
  * A function for getting Hours in a input date
  * 
- * @param {string} date - Date in ISO format 
+ * @param {string} date - Date in ISO format
+ * @return {number} Required hours or -1, if date can't be parsed
  */
 function getHours(date) {
     let msec = Date.parse(date);
@@ -362,7 +366,8 @@ function getHours(date) {
 /**
  * A function for getting Minutes in a input date
  * 
- * @param {string} date - Date in ISO format 
+ * @param {string} date - Date in ISO format
+ * @return {number} Required minutes or -1, if date can't be parsed
  */
 function getMinutes(date) {
     let msec = Date.parse(date);
@@ -376,6 +381,7 @@ function getMinutes(date) {
  * A function for create a new div with class name
  * 
  * @param {string} name - className string
+ * @return {HTMLDivElement} A newly created div
  */
 function createDivWithClass(name) {
     let $div = document.createElement('div');
