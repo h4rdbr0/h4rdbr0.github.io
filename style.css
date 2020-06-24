@@ -41,14 +41,17 @@
 /* Schedule Container */
 
 .schedule-container {
+  display: flex;
+  flex-direction: column;
   padding: 30px 30px;
+  overflow-x: auto;
 }
 
-.schedule-container > div:nth-child(even) {
+.schedule-container > div:nth-child(even) > div {
   background-color: #e0e0e0;
 }
 
-.schedule-container > div:nth-child(odd) {
+.schedule-container > div:nth-child(odd) > div {
   background-color: #adadad;
 }
 
@@ -63,7 +66,6 @@
 
 .header-row, .employee-row {
   display: flex;
-  overflow: hidden;
 }
 
 .employee-row:hover {
@@ -104,7 +106,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 .legend-virtual, .legend-actual {
