@@ -57,7 +57,7 @@
   background-color: #adadad;
 }
 
-.header-row > div, .employee-row .employee-name, .employee-row .employee-role {
+.header-row .employee-time, .employee-name, .employee-role {
   padding: 10px 0;
 }
 
