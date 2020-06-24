@@ -1,0 +1,115 @@
+/* Choosing Day */
+
+.choose-date {
+  position: relative;
+  display: inline-block;
+  width: 240px;
+  margin: 30px 30px 0;
+  text-align: center;
+}
+
+.date-text {
+  background-color: #adadad;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dates-list {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: #e0e0e0;
+  box-shadow: 0px 16px 32px 0px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.dates-list > div {
+  padding: 10px;
+}
+
+.dates-list > div:hover {
+  cursor: pointer;
+  background-color: #adadad;
+}
+
+.choose-date:hover .dates-list {
+  display: block;
+}
+
+/* Schedule Container */
+
+.schedule-container {
+  padding: 30px 30px;
+}
+
+.schedule-container > div:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+.schedule-container > div:nth-child(odd) {
+  background-color: #adadad;
+}
+
+.header-row > div, .employee-row .employee-name, .employee-row .employee-role {
+  padding: 10px 0;
+}
+
+.header-row > div, .employee-row > div {
+  text-align: center;
+  border-right: 2px solid black;
+}
+
+.header-row, .employee-row {
+  display: flex;
+  overflow: hidden;
+}
+
+.employee-row:hover {
+  cursor: pointer;
+}
+
+.employee-name {
+  flex: 1 0 100px;
+}
+
+.employee-role {
+  flex: 1 0 150px;
+}
+
+.employee-time {
+  flex: 1 0 45px;
+}
+
+/* Filling blocks for worked time */
+
+.virtual-hours {
+  height: 100%;
+  background-color: #000;
+}
+
+.actual-hours {
+  height: 100%;
+  background: repeating-linear-gradient(-60deg, white, brown 15%, white 30%);
+}
+
+/* Legend Panel */
+
+.legend {
+  padding-left: 30px;
+}
+
+.legend > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.legend-virtual, .legend-actual {
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
+}
+
